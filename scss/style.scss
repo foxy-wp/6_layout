@@ -1,0 +1,169 @@
+$font-family-base: "Titillium Web", sans-serif;
+$primary: #30bae7;
+$secondary: #eb7d4b;
+$warning: #ffdd99;
+$btn-focus-width:0;
+$btn-border-width:0;
+
+
+@mixin size($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin text_param ($fontS, $lineH, $fontW){
+  font-size: $fontS;
+  line-height: $lineH;
+  font-weight: $fontW;
+}
+
+@mixin padding-block($ptop, $pb){
+  padding-top: $ptop;
+  padding-bottom: $pb;
+}
+
+@mixin main-text($color_title, $letterSp, $marginT){
+  letter-spacing: $letterSp;
+  color: $color_title;
+  position: relative;
+  margin-top: $marginT;
+ }
+
+@mixin main-text_line ($bcolor){
+  content: "";
+  width: 87px;
+  height: 4px;
+  background-color: $bcolor;
+  position: absolute;
+  top: 51px;
+  left: 50%;
+  transform: translateX(-43px);
+}
+
+@mixin nav_btn($bRadius, $bgC, $Cr){
+  border-radius: $bRadius;
+  background-color: $bgC;
+  color: $Cr;
+}
+
+@mixin big_btn($bgCol, $borderC, $letterSp, $col){
+  background-color:$bgCol;
+  border-bottom: 3px $borderC solid;
+  letter-spacing: $letterSp;
+  color: $col;
+}
+
+@mixin star ($top, $left){
+  content: "*";
+  color: #ff0000;
+  position: absolute;
+  top:$top;
+  left:$left;
+}
+
+@import "../node_modules/swiper/swiper-bundle.css";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "header";
+@import "services";
+@import "team";
+@import "skills";
+@import "portfolio";
+@import "about";
+@import "contact-form";
+@import "footer";
+@import "fonts.scss";
+
+body{
+
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.container{
+  padding: 0;
+}
+a:hover{
+  text-decoration: none;
+}
+ul{
+  li{
+    list-style-type: none;
+  }
+}
+
+//Slick slider styles
+
+#slick {
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  gap: 10px;
+}
+
+//DOTS
+
+.slick-active button {
+  background-color: #666666;
+  width: 14px;
+  height: 14px;
+
+}
+
+.slick-active {
+  margin-top: 0;
+}
+
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 116px;
+  padding-left: 0;
+
+  li {
+    list-style: none;
+    margin: 0 10px;
+
+    .slick-active {
+      margin-top: 0;
+    }
+
+    .slick-active button {
+      background-color: #666666;
+    }
+  }
+
+  li button {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.0);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 0;
+
+  }
+
+  & .slick-active button {
+    width: 14px;
+    height: 14px;
+    border: #ffffff;
+    background-color: #ffffff;;
+  }
+}
+
+
+
+
+
+}
+
+
+
+
+
+

@@ -1,0 +1,130 @@
+.contact-form {
+  background-color: #3c5499;
+  @include padding-block(120px, 115px);
+
+  .main-text {
+    &_title {
+      color: #ffffff;
+
+      &::after {
+        background-color: #273a71;
+      }
+    }
+
+    &_text {
+      @include main-text(#ffffff, 0.021em, 36px);
+
+    }
+
+  }
+
+  .needs-validation {
+    margin-top: 74px;
+    @media (max-width: 576px) {
+      margin-inline:10px;
+    }
+  }
+
+  .form-group {
+    max-width: 860px;
+    margin: 0 auto;
+
+    .form-control {
+
+      display: block;
+      background-color: #273a71;
+      border: 1px solid #273a71;
+
+      &::placeholder {
+        color: #ffffff;
+        @include text_param(18px, 18px, 400);
+
+      }
+
+      &:hover::placeholder {
+        color: #ffff00;
+      }
+
+      &:focus::placeholder {
+        color: #86cfda;
+      }
+
+    }
+
+
+  }
+
+  .form-input {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+
+    span::before {
+      @include star(4px, 105px);
+    }
+
+    span::after {
+      @include star(4px, 105px);
+    }
+
+    &_text {
+      max-width: 414px;
+      margin: 0 15px;
+      height: 56px;
+      padding: 1px 24px 0;
+      color: #ffffff;
+      @media (max-width: 992px) {
+        width: 100%;
+        margin: 10px auto;
+        max-width: 768px;
+      }
+    }
+  }
+
+  .form-textarea {
+    margin-top: 27px;
+
+
+    span::after {
+      @include star(4px, 122px);
+
+    }
+
+    .form-control {
+      padding-left: 22px;
+      padding-top: 18px;
+      height: 200px;
+      border: 4px solid #273a71;
+      color: #ffffff;
+
+
+      &::-webkit-resizer {
+        background: url(../img/arrow.png) no-repeat;
+      }
+
+
+    }
+  }
+
+
+  button {
+    @include big_btn($primary, #299ec5, 0.02em, #ffffff);
+    @include size(294px, 70px);
+    @include text_param(18px, 26px, 600);
+    margin-top: 59px;
+    padding-block: 22px;
+    margin-inline: auto;
+    display: block;
+
+  }
+
+  @media (max-width: 425px) {
+    button {
+      @include size(190px, 50px);
+      padding-block: 10px;
+    }
+  }
+}

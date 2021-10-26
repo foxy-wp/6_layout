@@ -1,0 +1,86 @@
+#navbar{
+  overflow: hidden;
+}
+.header {
+  background-color: #87509c;
+  padding-top: 48px;
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  .navbar {
+    padding-right: 10px;
+    background-color: #87509c;
+    &-nav{padding-right: 12px;}
+
+    img {
+      margin-left: 58px;
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
+    }
+
+    .nav-item {
+      margin-right: 28px;
+      line-height: 1;
+      }
+
+      .nav-link {
+        color: #ffffff;
+        text-align: center;
+        &.active {
+          @include size(77px, 32px);
+          @include nav_btn(4px, #643a79, #ffffff);
+          margin: 0 auto;
+      }
+    }
+  }
+
+  .welcome {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include padding-block(120px, 145px);
+
+    &_title {
+      @include text_param(42.2px, 48px, 700);
+      color: #f7f3ea;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      @include padding-block(80px, 80px);
+      margin-inline: 15px;
+      &_title {
+        @include text_param(36px, 36px, 700);
+      }
+    }
+    @media (max-width: 425px) {
+      &_title {
+        @include text_param(24px, 24px, 700);
+      }
+    }
+
+
+    a {
+      @include big_btn(#eb7d4b, #c86a40, 0.02e, #ffffff);
+      @include size(294px, 70px);
+      @include text_param(18px, 26px, 600);
+      margin-top: 48px;
+      padding-block: 22px;
+    }
+
+    @media (max-width: 425px) {
+      a {
+        @include size(190px, 50px);
+        padding-block: 10px;
+      }
+    }
+  }
+}

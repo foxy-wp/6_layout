@@ -1,0 +1,125 @@
+.about {
+  background-color: #d74680;
+  @include padding-block(120px, 110px);
+  @media (max-width: 768px) {
+    & {
+      @include padding-block(40px, 40px);
+    }}
+
+  .main-text {
+
+    &_title {
+      color: #ffffff;
+
+      &::after {
+        background-color: #b93c6e;
+      }
+    }
+
+    &_text {
+      @include main-text(#ffffff, 0.021em, 36px);
+
+    }
+
+    @media (max-width: 767px) {
+      @include padding-block(80px, 80px);
+      margin-inline: 15px;
+      text-align: center;
+      .main-text_title::after {
+        top: 85px;
+      }
+      &_title {
+        @include text_param(36px, 36px, 700);
+      }
+    }
+    @media (max-width: 425px) {
+      &_title {
+        @include text_param(24px, 24px, 700);
+      }
+    }
+  }
+
+  .about-items {
+    &__top {
+      margin-bottom: 120px;
+      margin-top: 66px;
+      margin-inline: 20px;
+      @media(max-width: 769px) {
+        margin: 0;
+      }
+
+
+    }
+
+    &_image {
+      padding-left: 2px;
+      margin-right: 50px;
+      @include size(96px, 96px);
+
+      @media(max-width: 992px) {
+        margin-right: 10px;
+      }
+      @media (max-width: 768px) {
+        margin: 0 auto;
+      }
+
+      img {
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    &__item {
+      @media (max-width: 768px) {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      &_q {
+        @include text_param(21px, 31px, 400);
+        font-style: italic;
+        letter-spacing: 0.03em;
+        color: #ffffff;
+        padding-right: 36px;
+        padding-top: 4px;
+        margin-bottom: 25px;
+      }
+
+      &_title {
+        @include text_param(24px, 18px, 700);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        padding-bottom: 4px;
+      }
+
+      &_subtitle {
+        @include text_param(18px, 26px, 400);
+        letter-spacing: 0.02em;
+        color: #ffdd99;
+      }
+    }
+
+
+    .about-block {
+      display: flex;
+      padding: 0;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+
+    .block_left {
+      padding-left: 37px;
+    }
+
+    .next-block {
+      margin-top: 142px;
+      margin-inline: 0;
+      @media (max-width: 768px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+

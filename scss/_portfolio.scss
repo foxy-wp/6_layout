@@ -1,0 +1,123 @@
+.portfolio {
+  background-color: #ffdd99;;
+  @include padding-block(120px, 110px);
+
+  .main-text {
+    &_title {
+      color: #393939;
+
+      &::after {
+        background-color: #e5c37f;
+      }
+    }
+
+    &_text {
+      @include main-text(#887a5f, 0.021em, 35px);
+
+      p {
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+  .portfolio-block {
+    &__btns {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 60px;
+
+      a {
+        border: none;
+        @include text_param(18px, 19px, 400);
+        letter-spacing: 0.02em;
+        margin-inline: 6px;
+        text-align: center;
+        padding-top: 7px;
+        @include size(84px, 38px);
+        @include nav_btn(4px, rgba(0, 0, 0, 0.07), #393939);
+
+        &:hover {
+          @include nav_btn(4px, #ffffff, #393939);
+        }
+
+        //for interactive
+        &.active {
+          @include nav_btn(4px, #ffffff, #393939);
+        }
+
+
+      }
+    }
+
+    &__item {
+
+      &_title {
+        @include text_param(18px, 19px, 400);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: #393939;
+        text-align: center;
+        margin-top: 26px;
+        margin-bottom: 64px;
+        @media (max-width: 580px) {
+          &{text-align: center;}
+        }
+
+      }
+    }
+      &:nth-child(odd) {
+        padding-left: 11px;
+      }
+
+      img:nth-child(odd) {
+        margin-left: 20px;
+      }
+    @media (max-width: 576px) {
+      img:nth-child(odd) {
+        margin-inline: 0;
+      }
+
+
+      }
+
+
+  }
+
+  @media (max-width: 580px) {
+    &__item {
+      padding: 0;
+
+    }
+  }
+
+}
+
+
+
+
+.green-btn {
+  margin-top: 18px;
+  a {
+    @include big_btn(#17c2a4, #14a58c, 0.02em, #ffffff);
+    @include size(294px, 70px);
+    @include text_param(18px, 26px, 600);
+    padding-block: 22px;
+
+  }
+}
+
+@media (max-width: 425px) {
+  a {
+    @include size(190px, 50px);
+    padding-block: 10px;
+  }
+  .green-btn {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+

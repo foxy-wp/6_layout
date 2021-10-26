@@ -1,0 +1,119 @@
+.team {
+  background-color: #e7f1f8;
+  @include padding-block(120px, 110px);
+
+  @media (max-width: 768px) {
+
+    @include padding-block(80px, 80px);
+
+  }
+
+  .main-text {
+    &_title {
+      color: #3c4761;
+
+      &::after {
+        background-color: #c9dae6;
+      }
+    }
+
+    &_text {
+      @include main-text(#3c4761, 0.021em, 38px);
+
+    }
+
+    @media (max-width: 768px) {
+
+      &_title {
+        @include text_param(32px, 36px, 700);
+        text-align: center;
+      }
+    }
+    @media (max-width: 478px) {
+      &_title {
+        @include text_param(24px, 24px, 700);
+
+        &::after {
+          top: 70px;
+        }
+      }
+    }
+
+  }
+
+  .team-items {
+    display: flex;
+    margin-top: 76px;
+    margin-inline: 15px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &_img {
+        border-radius: 50%;
+        @include size(200px, 200px);
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &_title {
+        @include text_param(24px, 18px, 700);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: #27283d;
+        margin-top: 40px;
+      }
+
+      &_subtitle {
+        @include text_param(16px, 18px, 400);
+        letter-spacing: 0.02em;
+        color: #30bae7;
+        margin-top: 5px;
+      }
+
+      &_text {
+        @include text_param(16px, 24px, 300);
+        letter-spacing: 0.02em;
+        color: #3c4761;
+        text-align: center;
+        padding-inline: 30px;
+        margin-top: 12px;
+
+      }
+
+      &_social {
+        margin-top: 30px;
+
+        ul {
+          display: flex;
+          justify-content: space-around;
+
+          li {
+            border-radius: 50%;
+            @include size(32px, 32px);
+            background-color: #bdd1df;
+            text-align: center;
+            margin-inline: 6px;
+
+            &:hover {
+              background-color: #30bae7;
+            }
+
+            i {
+              color: #ffffff;
+              padding-top: 7px;
+              padding-left: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
