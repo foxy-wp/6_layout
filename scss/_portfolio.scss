@@ -1,6 +1,6 @@
 .portfolio {
-  background-color: #ffdd99;;
-  @include padding-block(120px, 110px);
+  background-color: #ffdd99;
+  @include padding-block(120px, 109px);
 
   .main-text {
     &_title {
@@ -52,6 +52,8 @@
     }
 
     &__item {
+      padding-left: 20px;
+      padding-right: 0;
 
       &_title {
         @include text_param(18px, 19px, 400);
@@ -59,21 +61,21 @@
         letter-spacing: 0.02em;
         color: #393939;
         text-align: center;
-        margin-top: 26px;
+        margin-top: 30px;
         margin-bottom: 64px;
         @media (max-width: 580px) {
           &{text-align: center;}
         }
 
       }
-    }
-      &:nth-child(odd) {
+
+      &:nth-child(2n) {
         padding-left: 11px;
       }
 
-      img:nth-child(odd) {
-        margin-left: 20px;
-      }
+    }
+
+
     @media (max-width: 576px) {
       img:nth-child(odd) {
         margin-inline: 0;
@@ -84,13 +86,13 @@
 
 
   }
+  .laptop-items{
+    display: flex;
+    flex-wrap: wrap;
 
-  @media (max-width: 580px) {
-    &__item {
-      padding: 0;
-
-    }
   }
+
+
 
 }
 
@@ -98,14 +100,22 @@
 
 
 .green-btn {
-  margin-top: 18px;
+  margin-top: 14px;
   a {
     @include big_btn(#17c2a4, #14a58c, 0.02em, #ffffff);
     @include size(294px, 70px);
     @include text_param(18px, 26px, 600);
     padding-block: 22px;
 
+  &:hover{
+    @include big_btn(#14a58c, #14a58c, 0.02em, #ffffff);
   }
+  &.active{
+
+  }
+  &.focus{
+    color: #ffffff;
+  }}
 }
 
 @media (max-width: 425px) {

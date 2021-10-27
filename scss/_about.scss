@@ -1,6 +1,6 @@
 .about {
   background-color: #d74680;
-  @include padding-block(120px, 110px);
+  @include padding-block(118px, 9px);
   @media (max-width: 768px) {
     & {
       @include padding-block(40px, 40px);

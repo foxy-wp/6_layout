@@ -1,14 +1,17 @@
-#navbar{
+#navbar {
   overflow: hidden;
 }
+
 .header {
   background-color: #87509c;
   padding-top: 48px;
+
   .sticky {
     position: fixed;
     top: 0;
     width: 100%;
   }
+
   .sticky + .content {
     padding-top: 60px;
   }
@@ -16,7 +19,13 @@
   .navbar {
     padding-right: 10px;
     background-color: #87509c;
-    &-nav{padding-right: 12px;}
+
+    &-nav {
+      padding-right: 12px;
+      @media (max-width: 768px) {
+        padding-right: 0;
+      }
+    }
 
     img {
       margin-left: 58px;
@@ -28,15 +37,38 @@
     .nav-item {
       margin-right: 28px;
       line-height: 1;
+      @media(max-width: 992px){margin-right: 0;}
+      &:first-child{
+        margin-right: 20px;
+        @media(max-width: 992px){
+          margin-right: 10px;
+        }
+        @media(max-width: 768px){
+          margin-right: 0;
+        }
       }
 
-      .nav-link {
-        color: #ffffff;
-        text-align: center;
-        &.active {
-          @include size(77px, 32px);
-          @include nav_btn(4px, #643a79, #ffffff);
+    }
+
+    .nav-link {
+      color: #ffffff;
+      text-align: center;
+
+      &.active {
+        @include size(77px, 32px);
+        @include nav_btn(4px, #643a79, #ffffff);
+        margin: 0 auto;
+      }
+
+      @media (max-width: 425px) {
+        & {
           margin: 0 auto;
+          padding-block: 15px;
+
+          &.active {
+            padding-block: 8px;
+          }
+        }
       }
     }
   }
@@ -69,7 +101,7 @@
 
 
     a {
-      @include big_btn(#eb7d4b, #c86a40, 0.02e, #ffffff);
+      @include big_btn(#eb7d4b, #c86a40, 0.02em, #ffffff);
       @include size(294px, 70px);
       @include text_param(18px, 26px, 600);
       margin-top: 48px;

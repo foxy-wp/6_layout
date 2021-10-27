@@ -13,15 +13,17 @@
 
     &_text {
       @include main-text(#ffffff, 0.021em, 36px);
-
+      @media(max-width: 992px) {
+        display: block;
+      }
     }
 
   }
 
   .needs-validation {
-    margin-top: 74px;
+    margin-top: 45px;
     @media (max-width: 576px) {
-      margin-inline:10px;
+      margin-inline: 10px;
     }
   }
 
@@ -43,6 +45,7 @@
 
       &:hover::placeholder {
         color: #ffff00;
+
       }
 
       &:focus::placeholder {
@@ -58,16 +61,57 @@
     display: flex;
     justify-content: center;
     padding: 0;
+
     @media (max-width: 992px) {
       flex-direction: column;
     }
 
-    span::before {
-      @include star(4px, 105px);
+    &__name {
+      margin-top: 27px;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      margin-inline: 16px;
+      @media(max-width: 992px) {
+        margin-inline: 0;
+      }
+
+      .require {
+        z-index: 2;
+        position: absolute;
+        top: 20px;
+        left: 26px;
+        display: inline;
+        color: #ffffff;
+        @include text_param(18px, 18px, 400);
+
+        span {
+          font-size: 16px;
+          color: #ff4444;
+        }
+      }
     }
 
-    span::after {
-      @include star(4px, 105px);
+    &__email {
+      margin-top: 27px;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+
+      .require {
+        z-index: 2;
+        position: absolute;
+        top: 20px;
+        left: 26px;
+        display: inline;
+        color: #ffffff;
+        @include text_param(18px, 18px, 400);
+
+        span {
+          font-size: 16px;
+          color: #ff4444;
+        }
+      }
     }
 
     &_text {
@@ -82,15 +126,36 @@
         max-width: 768px;
       }
     }
+
+    input {
+
+
+      &:focus + .require, &:not(:placeholder-shown) + .require {
+        display: none;
+      }
+    }
   }
 
   .form-textarea {
     margin-top: 27px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
 
 
-    span::after {
-      @include star(4px, 122px);
+    .require {
+      z-index: 2;
+      position: absolute;
+      top: 20px;
+      left: 26px;
+      display: inline;
+      color: #ffffff;
+      @include text_param(18px, 18px, 400);
 
+      span {
+        font-size: 16px;
+        color: #ff4444;
+      }
     }
 
     .form-control {
@@ -106,6 +171,15 @@
       }
 
 
+    }
+
+
+  }
+
+  textarea {
+
+    &:focus + .require, &:not(:placeholder-shown) + .require {
+      display: none;
     }
   }
 

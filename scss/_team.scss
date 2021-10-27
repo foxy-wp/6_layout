@@ -1,6 +1,6 @@
 .team {
   background-color: #e7f1f8;
-  @include padding-block(120px, 110px);
+  @include padding-block(120px, 126px);
 
   @media (max-width: 768px) {
 
@@ -83,15 +83,19 @@
         text-align: center;
         padding-inline: 30px;
         margin-top: 12px;
+        margin-bottom: 30px;
 
       }
 
       &_social {
-        margin-top: 30px;
+
+          margin-top: auto;
+
 
         ul {
           display: flex;
           justify-content: space-around;
+          align-items: flex-end;
 
           li {
             border-radius: 50%;

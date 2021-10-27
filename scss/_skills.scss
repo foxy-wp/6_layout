@@ -1,5 +1,5 @@
 .skills {
-  @include padding-block(132px, 123px);
+  @include padding-block(116px, 123px);
   @media (max-width: 576px){
     &{@include padding-block(60px, 60px);}
   }
@@ -49,6 +49,9 @@
         color: #3c4761;
         text-align: center;
         margin-top: 18px;
+        @media(max-width: 576px) {
+          margin-bottom: 40px;
+        }
       }
     }
   }
